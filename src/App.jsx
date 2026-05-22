@@ -6,6 +6,7 @@ import Services from './pages/Services/Services'
 import BlogPage from './pages/BlogPage'
 import ContactUs from './pages/ContactUs'
 import Brouchure from './pages/Brouchure'
+import WriteForUs from './pages/WriteForUs'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -20,6 +21,8 @@ const App = () => {
         <Route path="/brochure" element={<Brouchure />} />
         <Route path="/broucher" element={<Navigate to="/brochure" replace />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/writeforus" element={<WriteForUs />} />
+        <Route path="/write-for-us" element={<Navigate to="/writeforus"/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
