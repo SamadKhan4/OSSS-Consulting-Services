@@ -33,7 +33,7 @@ const Navbar = () => {
 
             <li className="relative group">
               <div className="flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
-                <span>services</span>
+                <span><a href="/services">Services</a></span>
                 <svg
                   className="w-4 h-4 mt-[2px]"
                   fill="none"
@@ -106,7 +106,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a
-                    href="/broucher"
+                    href="/brochure"
                     className="block px-4 py-2 text-[15px] text-black hover:bg-blue-50 hover:text-blue-600 transition"
                   >
                     Broucher

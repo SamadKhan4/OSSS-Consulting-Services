@@ -8,6 +8,7 @@ import OurWorkProcess from '../components/OurWorkProcess'
 import WhyChooseTemplate from '../components/WhyChooseUs'
 import Testimonials from '../components/Testimonials'
 import BlogComponent from '../components/BlogComponent'
+import CTA from '../components/Common/CTA'
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <WhyChooseTemplate />  
         <Testimonials />
         <BlogComponent />
+        <CTA />
     </div>
   )
 }
