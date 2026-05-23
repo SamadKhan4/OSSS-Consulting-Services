@@ -12,7 +12,7 @@ import TermsCondition from "./pages/TermsCondition";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // Service Pages
-import WebDev from "./pages/Services/WebDev";
+import WebDev from "./pages/Services/Webdev";
 import AppDev from "./pages/Services/Appdev";
 import DigitalMarketing from "./pages/Services/DigitalMarketing";
 import TechnicalSupport from "./pages/Services/TechnicalSupport";
