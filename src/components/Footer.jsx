@@ -116,10 +116,10 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[16px] text-gray-300">
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-white transition">
+            <a href="/privacy-policy" className="hover:text-white transition">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="/terms-conditions" className="hover:text-white transition">
               Terms & Conditions
             </a>
           </div>

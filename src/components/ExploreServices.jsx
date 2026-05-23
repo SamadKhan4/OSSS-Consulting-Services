@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import webdev from "../assets/Homepage/webdev.png";
 import appdev from "../assets/Homepage/appdev.png";
@@ -14,6 +15,7 @@ const services = [
     desc: "We create modern, responsive websites and web applications designed to deliver exceptional user experiences and business performance.",
     image: webdev,
     icon: "💻",
+    link: "/services/webdev",
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const services = [
     desc: "Our team develops high-performance mobile applications that are scalable, secure, and user-friendly across Android and iOS platforms.",
     image: appdev,
     icon: "📱",
+    link: "/services/appdev",
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ const services = [
     desc: "We help businesses increase visibility, attract customers, and grow online through strategic SEO, social media marketing, and online advertising.",
     image: digimarket,
     icon: "📣",
+    link: "/services/digitalmarketing",
   },
   {
     id: 4,
@@ -38,6 +42,7 @@ const services = [
     desc: "Reliable IT support and maintenance services to ensure your business operations run smoothly and efficiently.",
     image: techsupport,
     icon: "🎧",
+    link: "/services/technicalsupport",
   },
 ];
 
@@ -49,7 +54,6 @@ const ExploreServices = () => {
   return (
     <section className="w-full bg-[#f4f6f8] py-12 px-4 md:px-8 lg:px-[70px]">
       <div className="max-w-[1280px] mx-auto">
-        {/* Heading */}
         <div className="mb-8">
           <span className="inline-block text-[11px] text-[#2637e8] bg-white px-3 py-1 rounded-full mb-2">
             Explore Services
@@ -61,8 +65,8 @@ const ExploreServices = () => {
           </h2>
         </div>
 
-        {/* Tabs only once */}
-        <div className="grid grid-cols-2 md:grid-cols-4 bg-white border border-1 rounded-[4px] overflow-hidden mb-5">
+        {/* Tabs */}
+        <div className="grid grid-cols-2 md:grid-cols-4 bg-white border border-black/10 rounded-[4px] overflow-hidden mb-5">
           {services.map((tab) => (
             <button
               key={tab.id}
@@ -70,7 +74,7 @@ const ExploreServices = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`h-[58px] flex items-center justify-center text-[15px] md:text-[17px] font-semibold transition ${
                 tab.id === activeTab
-                  ? "bg-[#2637e8] text-white rounded-[4px] border border-6"
+                  ? "bg-[#2637e8] text-white"
                   : "text-[#222] hover:bg-gray-100"
               }`}
             >
@@ -84,9 +88,8 @@ const ExploreServices = () => {
           ))}
         </div>
 
-        {/* Single Active Content Card */}
-        <div className="bg-white rounded-[4px] px-6 md:px-10 py-8 md:py-12 border border-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
+        {/* Active Content */}
+        <div className="bg-white rounded-[4px] px-6 md:px-10 py-8 md:py-12 border border-black/10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <div className="w-[62px] h-[62px] rounded-full bg-[#2637e8] flex items-center justify-center text-white text-[28px] mb-10">
               {activeService.icon}
@@ -100,18 +103,17 @@ const ExploreServices = () => {
               {activeService.desc}
             </p>
 
-            <a
-              href="/services"
+            <Link
+              to={activeService.link}
               className="inline-flex items-center gap-3 text-[17px] font-semibold text-black hover:text-[#2637e8] transition"
             >
               Learn More
               <span className="w-6 h-6 rounded-full bg-[#2637e8] text-white flex items-center justify-center text-[14px]">
                 ↗
               </span>
-            </a>
+            </Link>
           </div>
 
-          {/* Right Image */}
           <div className="flex justify-center lg:justify-end">
             <img
               src={activeService.image}

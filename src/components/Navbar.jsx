@@ -132,7 +132,7 @@ const Navbar = () => {
 
           {/* Button */}
           <a
-            href="/get-started"
+            href="/contact"
             className="bg-[#2637E8] text-white px-7 py-3 rounded-[9px] text-[16px] font-medium hover:bg-blue-700 transition"
           >
             Get Started
