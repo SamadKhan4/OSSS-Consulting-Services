@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/Footer.png";
@@ -28,28 +29,40 @@ const Footer = () => {
 
             <div className="flex items-center gap-2 mt-8">
               <a
-                href="#"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Facebook"
                 className="w-6 h-6 rounded-full bg-[#1877F2] flex items-center justify-center text-white text-sm"
               >
                 <FaFacebookF />
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Instagram"
                 className="w-6 h-6 rounded-md bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center text-white text-sm"
               >
                 <FaInstagram />
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit LinkedIn"
                 className="w-6 h-6 rounded-sm bg-[#0A66C2] flex items-center justify-center text-white text-sm"
               >
                 <FaLinkedinIn />
               </a>
 
               <a
-                href="#"
+                href="https://x.com/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit X"
                 className="w-6 h-6 rounded-full bg-black flex items-center justify-center text-white text-sm"
               >
                 <FaXTwitter />
@@ -62,10 +75,26 @@ const Footer = () => {
             <h3 className="text-[22px] font-bold mb-9">services</h3>
 
             <ul className="space-y-5 text-[16px] text-gray-300">
-              <li>Technical Support</li>
-              <li>Web Design & Development</li>
-              <li>Mobile App Development</li>
-              <li>Digital Marketing</li>
+              <li>
+                <Link to="/services/technicalsupport" className="hover:text-white transition">
+                  Technical Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/webdev" className="hover:text-white transition">
+                  Web Design & Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/appdev" className="hover:text-white transition">
+                  Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/digitalmarketing" className="hover:text-white transition">
+                  Digital Marketing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -116,17 +145,22 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[16px] text-gray-300">
           <div className="flex items-center gap-5">
-            <a href="/privacy-policy" className="hover:text-white transition">
+            <Link to="/privacy-policy" className="hover:text-white transition">
               Privacy Policy
-            </a>
-            <a href="/terms-conditions" className="hover:text-white transition">
+            </Link>
+            <Link to="/terms-conditions" className="hover:text-white transition">
               Terms & Conditions
-            </a>
+            </Link>
           </div>
 
           <p>
             Copyright © 2026 Designed and developed by{" "}
-            <a href="#" className="underline text-white">
+            <a
+              href="https://adbornsolutions.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline text-white"
+            >
               Adbornsolutions.
             </a>
           </p>

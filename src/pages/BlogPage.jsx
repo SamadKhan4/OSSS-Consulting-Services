@@ -1,10 +1,57 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useState } from 'react'
 import bg from "../assets/bg.png";
 import CTA from '../components/Common/CTA';
 import blog from "../assets/Common/blog.png";
 
+const blogCards = [
+  {
+    id: 1,
+    date: "1 Jan 2026",
+    title: "How AI Is Transforming Modern Businesses",
+    desc: "Artificial Intelligence is helping companies automate tasks, analyze large data sets, and improve decision-making.",
+    more: "From smart chatbots to predictive analytics, AI helps teams reduce repetitive work, respond faster to customers, and make better operational decisions.",
+  },
+  {
+    id: 2,
+    date: "2 Jan 2026",
+    title: "Top Web Development Trends Businesses Should Follow",
+    desc: "Modern web development focuses on performance, security, and user experience.",
+    more: "Fast-loading pages, mobile-first layouts, accessible interfaces, and secure integrations are now essential for building trust and converting visitors.",
+  },
+  {
+    id: 3,
+    date: "20 Jan 2026",
+    title: "Cloud Computing & Digital Transformation",
+    desc: "Cloud technologies allow businesses to scale quickly, reduce infrastructure costs, and improve collaboration.",
+    more: "Cloud platforms make it easier to launch new services, protect data, and support teams working across locations with reliable digital tools.",
+  },
+  {
+    id: 4,
+    date: "1 Jan 2026",
+    title: "How AI Is Transforming Modern Businesses",
+    desc: "Artificial Intelligence is helping companies automate tasks, analyze large data sets, and improve decision-making.",
+    more: "AI adoption works best when businesses start with clear goals, clean data, and practical workflows that save real time for their teams.",
+  },
+  {
+    id: 5,
+    date: "2 Jan 2026",
+    title: "Top Web Development Trends Businesses Should Follow",
+    desc: "Modern web development focuses on performance, security, and user experience.",
+    more: "Businesses should prioritize responsive design, SEO-ready structure, and maintainable code so their websites can keep improving over time.",
+  },
+  {
+    id: 6,
+    date: "20 Jan 2026",
+    title: "Cloud Computing & Digital Transformation",
+    desc: "Cloud technologies allow businesses to scale quickly, reduce infrastructure costs, and improve collaboration.",
+    more: "The right cloud setup supports backups, remote access, integrations, and flexible growth without heavy infrastructure overhead.",
+  },
+];
+
 const BlogPage = () => {
+  const [expandedBlog, setExpandedBlog] = useState(null);
+
   return (
     <main>
         {/* Hero */}
@@ -39,9 +86,10 @@ const BlogPage = () => {
     {/* Cards */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]">
 
-      {[1, 2, 3, 4, 5, 6].map((item) => (
+      {blogCards.map((item) => (
         <div
-          key={item}
+          key={item.id}
+          id={`blog-${item.id}`}
           className="bg-white rounded-[14px] border border-black/10 overflow-hidden"
         >
           {/* Image */}
@@ -53,34 +101,36 @@ const BlogPage = () => {
             />
 
             <div className="absolute bottom-[10px] right-[10px] bg-[#2637e8] text-white text-[11px] px-3 py-[4px] rounded-[8px]">
-              {item % 3 === 1
-                ? "1 Jan 2026"
-                : item % 3 === 2
-                ? "2 Jan 2026"
-                : "20 Jan 2026"}
+              {item.date}
             </div>
           </div>
 
           {/* Content */}
           <div className="px-[14px] pb-[16px]">
             <h3 className="text-[17px] font-bold text-[#222] leading-[1.4] mb-[10px]">
-              {item % 3 === 1
-                ? "How AI Is Transforming Modern Businesses"
-                : item % 3 === 2
-                ? "Top Web Development Trends Businesses Should Follow"
-                : "Cloud Computing & Digital Transformation"}
+              {item.title}
             </h3>
 
             <p className="text-[13px] text-[#666] leading-[1.7] mb-[14px]">
-              {item % 3 === 1
-                ? "Artificial Intelligence is helping companies automate tasks, analyze large data sets, and improve decision-making."
-                : item % 3 === 2
-                ? "Modern web development focuses on performance, security, and user experience."
-                : "Cloud technologies allow businesses to scale quickly, reduce infrastructure costs, and improve collaboration."}
+              {item.desc}
             </p>
 
-            <button className="bg-[#2637e8] text-white text-[12px] px-3 py-[6px] rounded-full">
-              Read More
+            {expandedBlog === item.id && (
+              <p className="text-[13px] text-[#444] leading-[1.7] mb-[14px]">
+                {item.more}
+              </p>
+            )}
+
+            <button
+              type="button"
+              onClick={() =>
+                setExpandedBlog((current) =>
+                  current === item.id ? null : item.id
+                )
+              }
+              className="bg-[#2637e8] text-white text-[12px] px-3 py-[6px] rounded-full"
+            >
+              {expandedBlog === item.id ? "Show Less" : "Read More"}
             </button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -44,7 +45,8 @@ const CTA = () => {
 
           {/* Button */}
           <div className="relative z-10">
-            <button
+            <Link
+              to="/contact"
               className="
               bg-white
               text-[#2637e8]
@@ -55,10 +57,13 @@ const CTA = () => {
               font-semibold
               hover:scale-105
               transition
+              inline-flex
+              items-center
+              justify-center
             "
             >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

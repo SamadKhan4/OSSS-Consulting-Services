@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Link } from "react-router-dom";
 import blog from "../assets/Common/blog.png";
 
 const blogs = [
@@ -76,9 +77,12 @@ const BlogComponent = ({
                   {item.desc}
                 </p>
 
-                <button className="bg-[#2637e8] text-white px-4 py-2 rounded-full text-[14px]">
+                <Link
+                  to={`/blog#blog-${item.id}`}
+                  className="inline-flex bg-[#2637e8] text-white px-4 py-2 rounded-full text-[14px]"
+                >
                   Read More
-                </button>
+                </Link>
               </div>
             </div>
           ))}

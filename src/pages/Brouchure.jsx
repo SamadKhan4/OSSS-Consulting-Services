@@ -14,21 +14,24 @@ const brochures = [
     image: digiMarketing,
     title: "Digital Marketing",
     desc: "Boost your online presence with data-driven strategies, SEO optimization, and social media management aimed at growth.",
-    pdf: "/brochures/digital-marketing.pdf",
+    file: digiMarketing,
+    fileName: "digital-marketing-brochure.png",
   },
   {
     id: 2,
     image: webDesign,
     title: "Web Design & Development",
     desc: "Modern, responsive, and performance-driven websites tailored to your brand identity and your  business objectives.",
-    pdf: "/brochures/web-design.pdf",
+    file: webDesign,
+    fileName: "web-design-brochure.png",
   },
   {
     id: 3,
     image: appDev,
     title: "App Development",
     desc: "Native and cross-platform mobile solutions that provide seamless user experiences on iOS and Android devices.",
-    pdf: "/brochures/app-development.pdf",
+    file: appDev,
+    fileName: "app-development-brochure.png",
   },
 ];
 
@@ -82,8 +85,8 @@ const Brouchure = () => {
                   </p>
 
                   <a
-                    href={item.pdf}
-                    download
+                    href={item.file}
+                    download={item.fileName}
                     className="w-full h-[46px] rounded-[7px] bg-[#2637e8] text-white text-[14px] font-bold flex items-center justify-center gap-2 hover:bg-[#1d2cc7] transition"
                   >
                     <Download size={16} />

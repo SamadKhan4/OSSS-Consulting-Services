@@ -1,9 +1,34 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import bg from "../assets/bg.png";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    comment: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const subject = encodeURIComponent(`Website enquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.comment}`
+    );
+
+    setStatus("Opening your email app...");
+    window.location.href = `mailto:hr-manager@osssconsultingservices.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <main className="w-full bg-white">
       {/* Hero */}
@@ -83,17 +108,47 @@ const ContactUs = () => {
             </div>
 
             {/* Form */}
-            <form className="bg-white rounded-[10px] border border-black/10 p-[26px]">
-              <FormInput label="Name" placeholder="Enter your full name" />
-              <FormInput label="Email" placeholder="Enter your email" />
-              <FormInput label="Phone" placeholder="Enter your phone number" />
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white rounded-[10px] border border-black/10 p-[26px]"
+            >
+              <FormInput
+                label="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your full name"
+                required
+              />
+              <FormInput
+                label="Email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+              />
+              <FormInput
+                label="Phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Enter your phone number"
+                required
+              />
 
               <div className="mb-[18px]">
                 <label className="block text-[13px] font-semibold mb-2">
                   Comment
                 </label>
                 <textarea
+                  name="comment"
+                  value={formData.comment}
+                  onChange={handleChange}
                   placeholder="comment"
+                  required
                   className="w-full h-[110px] rounded-[6px] border border-black/20 px-4 py-3 text-[13px] outline-none focus:border-[#2637e8] resize-none"
                 />
               </div>
@@ -104,6 +159,12 @@ const ContactUs = () => {
               >
                 Contact Us
               </button>
+
+              {status && (
+                <p className="mt-4 text-center text-[12px] text-[#2637e8]">
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </div>
@@ -120,13 +181,25 @@ const IconBox = ({ icon }) => {
   );
 };
 
-const FormInput = ({ label, placeholder }) => {
+const FormInput = ({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
+  placeholder,
+  required = false,
+}) => {
   return (
     <div className="mb-[16px]">
       <label className="block text-[13px] font-semibold mb-2">{label}</label>
       <input
-        type="text"
+        type={type}
+        name={name}
+        value={value}
+        onChange={onChange}
         placeholder={placeholder}
+        required={required}
         className="w-full h-[40px] rounded-[6px] border border-black/20 px-4 text-[13px] outline-none focus:border-[#2637e8]"
       />
     </div>
