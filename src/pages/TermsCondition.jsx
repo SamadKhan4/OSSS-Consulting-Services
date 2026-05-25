@@ -7,15 +7,15 @@ const TermsCondition = () => {
   return (
     <main className="w-full bg-white">
       <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h1 className="text-white text-[34px] font-bold">
+        <h1 className="text-white text-[28px] md:text-[34px] leading-tight font-bold">
           Terms & Condition
         </h1>
       </section>
 
-      <section className="py-[55px] px-4 md:px-8 lg:px-[100px]">
+      <section className="py-12 md:py-[55px] px-4 md:px-8 lg:px-[100px]">
         <div className="max-w-[1120px] mx-auto space-y-[45px]">
           <TermBlock number="01" title="Acceptance of Terms">
             <p>
@@ -49,8 +49,8 @@ const TermsCondition = () => {
           <div>
             <SectionTitle number="03" title="Payments & Pricing" />
 
-            <div className="bg-white border border-black/15 rounded-[6px] p-[38px]">
-              <div className="grid grid-cols-2 text-[#2637e8] text-[15px] font-bold uppercase tracking-[2px] mb-5">
+            <div className="bg-white border border-black/15 rounded-[6px] p-5 md:p-[38px] overflow-x-auto">
+              <div className="grid grid-cols-2 min-w-[520px] text-[#2637e8] text-[13px] md:text-[15px] font-bold uppercase tracking-[1px] md:tracking-[2px] mb-5">
                 <div>Engagement Type</div>
                 <div>Billing Cycle</div>
               </div>
@@ -62,7 +62,7 @@ const TermsCondition = () => {
               ].map(([left, right], index) => (
                 <div
                   key={left}
-                  className={`grid grid-cols-2 text-[17px] text-[#474c62] px-3 py-5 ${
+                  className={`grid grid-cols-2 min-w-[520px] text-[15px] md:text-[17px] text-[#474c62] px-3 py-5 ${
                     index % 2 === 0 ? "bg-[#f6f7fc]" : "bg-white"
                   }`}
                 >
@@ -120,8 +120,8 @@ const TermsCondition = () => {
 };
 
 const SectionTitle = ({ number, title }) => (
-  <h2 className="text-[34px] md:text-[38px] font-extrabold text-[#111] mb-7">
-    <span className="text-[#004cff] mr-5">{number}</span>
+  <h2 className="text-[26px] sm:text-[30px] md:text-[38px] leading-tight font-extrabold text-[#111] mb-7">
+    <span className="text-[#004cff] mr-3 md:mr-5">{number}</span>
     {title}
   </h2>
 );
@@ -138,7 +138,7 @@ const TermBlock = ({ number, title, children, highlight = false }) => (
     <SectionTitle number={number} title={title} />
 
     <div
-      className={`rounded-[6px] p-[38px] text-[20px] leading-[1.65] text-[#474c62] ${
+      className={`rounded-[6px] p-5 md:p-[38px] text-[16px] md:text-[20px] leading-[1.7] md:leading-[1.65] text-[#474c62] ${
         highlight
           ? "bg-[#eef3ff] border-l-[5px] border-[#2637e8]"
           : "bg-white border border-black/15"
@@ -150,9 +150,9 @@ const TermBlock = ({ number, title, children, highlight = false }) => (
 );
 
 const InfoCard = ({ title, text }) => (
-  <div className="bg-[#eef3ff] rounded-[4px] p-[34px] min-h-[160px]">
-    <h3 className="text-[#2637e8] text-[22px] font-bold mb-4">{title}</h3>
-    <p className="text-[18px] leading-[1.6] text-[#474c62]">{text}</p>
+  <div className="bg-[#eef3ff] rounded-[4px] p-5 md:p-[34px] min-h-[160px]">
+    <h3 className="text-[#2637e8] text-[19px] md:text-[22px] font-bold mb-4">{title}</h3>
+    <p className="text-[15px] md:text-[18px] leading-[1.6] text-[#474c62]">{text}</p>
   </div>
 );
 

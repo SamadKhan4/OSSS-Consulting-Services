@@ -13,15 +13,15 @@ const PrivacyPolicy = () => {
   return (
     <main className="w-full bg-white">
       <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h1 className="text-white text-[34px] font-bold">
+        <h1 className="text-white text-[28px] md:text-[34px] leading-tight font-bold">
           Privacy & Policy
         </h1>
       </section>
 
-      <section className="py-[55px] px-4 md:px-8 lg:px-[100px]">
+      <section className="py-12 md:py-[55px] px-4 md:px-8 lg:px-[100px]">
         <div className="max-w-[1120px] mx-auto space-y-[45px]">
           <Section title="Introduction" number="01">
             <WhiteBox>
@@ -78,15 +78,15 @@ const PrivacyPolicy = () => {
           </Section>
 
           <Section title="Data Security" number="04">
-            <div className="bg-[#2637e8] rounded-[8px] p-[38px] text-white">
-              <div className="flex items-center gap-4 mb-7">
+            <div className="bg-[#2637e8] rounded-[8px] p-5 md:p-[38px] text-white">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-7">
                 <Shield size={34} />
-                <h3 className="text-[28px] font-bold">
+                <h3 className="text-[22px] md:text-[28px] leading-tight font-bold">
                   Enterprise-Grade Protection
                 </h3>
               </div>
 
-              <p className="text-[18px] leading-[1.6] text-white/90 mb-8">
+              <p className="text-[15px] md:text-[18px] leading-[1.7] md:leading-[1.6] text-white/90 mb-8">
                 We implement industry-standard security measures, including
                 256-bit encryption for data at rest and in transit.
               </p>
@@ -113,18 +113,18 @@ const PrivacyPolicy = () => {
             </div>
           </Section>
 
-          <div className="bg-[#eaf1ff] rounded-[12px] py-[50px] px-6 text-center">
-            <h2 className="text-[36px] font-extrabold mb-5">
+          <div className="bg-[#eaf1ff] rounded-[12px] py-10 md:py-[50px] px-5 md:px-6 text-center">
+            <h2 className="text-[28px] md:text-[36px] leading-tight font-extrabold mb-5">
               Have Questions?
             </h2>
-            <p className="text-[20px] text-[#474c62] max-w-[560px] mx-auto mb-8">
+            <p className="text-[16px] md:text-[20px] text-[#474c62] max-w-[560px] mx-auto mb-8">
               Our Data Privacy Officer is available to discuss any concerns
               regarding your data sovereignty.
             </p>
 
             <a
               href="mailto:hr-manager@osssconsultingservices.com"
-              className="inline-flex items-center gap-3 text-[#2637e8] text-[20px] font-semibold"
+              className="inline-flex flex-wrap items-center justify-center gap-3 text-[#2637e8] text-[14px] sm:text-[17px] md:text-[20px] font-semibold break-all"
             >
               hr-manager@osssconsultingservices.com
               <ArrowRight />
@@ -138,8 +138,8 @@ const PrivacyPolicy = () => {
 
 const Section = ({ number, title, children }) => (
   <div>
-    <h2 className="text-[34px] md:text-[38px] font-extrabold text-[#111] mb-7">
-      <span className="text-[#004cff] mr-5">{number}</span>
+    <h2 className="text-[26px] sm:text-[30px] md:text-[38px] leading-tight font-extrabold text-[#111] mb-7">
+      <span className="text-[#004cff] mr-3 md:mr-5">{number}</span>
       {title}
     </h2>
     {children}
@@ -148,7 +148,7 @@ const Section = ({ number, title, children }) => (
 
 const WhiteBox = ({ children, borderLeft = false, blue = false }) => (
   <div
-    className={`rounded-[6px] p-[38px] text-[20px] leading-[1.65] text-[#474c62] border border-black/15 ${
+    className={`rounded-[6px] p-5 md:p-[38px] text-[16px] md:text-[20px] leading-[1.7] md:leading-[1.65] text-[#474c62] border border-black/15 ${
       blue ? "bg-[#eef3ff]" : "bg-white"
     } ${borderLeft ? "border-l-[5px] border-l-[#2637e8]" : ""}`}
   >
@@ -157,18 +157,18 @@ const WhiteBox = ({ children, borderLeft = false, blue = false }) => (
 );
 
 const UseItem = ({ icon, title, text }) => (
-  <div className="flex gap-5 text-[#2637e8]">
+  <div className="flex gap-4 md:gap-5 text-[#2637e8]">
     <div className="mt-1 [&>svg]:w-[24px] [&>svg]:h-[24px]">{icon}</div>
     <div>
-      <h3 className="text-[#111] text-[20px] font-bold mb-2">{title}</h3>
-      <p className="text-[#474c62] text-[17px]">{text}</p>
+      <h3 className="text-[#111] text-[18px] md:text-[20px] font-bold mb-2">{title}</h3>
+      <p className="text-[#474c62] text-[15px] md:text-[17px]">{text}</p>
     </div>
   </div>
 );
 
 const RightBox = ({ title, text }) => (
-  <div className="border border-black/20 rounded-[4px] p-[30px]">
-    <h3 className="text-[20px] font-bold text-[#111] mb-3">{title}</h3>
+  <div className="border border-black/20 rounded-[4px] p-5 md:p-[30px]">
+    <h3 className="text-[18px] md:text-[20px] font-bold text-[#111] mb-3">{title}</h3>
     <p className="text-[15px] text-[#474c62] leading-[1.5]">{text}</p>
   </div>
 );

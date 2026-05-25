@@ -33,23 +33,23 @@ const ContactUs = () => {
     <main className="w-full bg-white">
       {/* Hero */}
       <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h1 className="text-white text-[34px] font-bold">
+        <h1 className="text-white text-[26px] md:text-[34px] leading-tight font-bold">
           Contact Us - OSS Consulting Services
         </h1>
       </section>
 
       {/* Contact Section */}
-      <section className="w-full bg-white py-[55px] px-4 md:px-8 lg:px-[100px]">
+      <section className="w-full bg-white py-12 md:py-[55px] px-4 md:px-8 lg:px-[100px]">
         <div className="max-w-[1140px] mx-auto">
           <div className="text-center mb-[35px]">
             <span className="inline-block text-[11px] text-[#2637e8] border border-[#2637e8]/25 rounded-full px-3 py-1 mb-3">
               Contact Us
             </span>
 
-            <h2 className="text-[30px] font-bold text-[#1b1b1b]">
+            <h2 className="text-[24px] md:text-[30px] leading-tight font-bold text-[#1b1b1b]">
               Fell free contact us today and get your solution
             </h2>
           </div>
@@ -57,7 +57,7 @@ const ContactUs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-[520px_1fr] gap-[30px]">
             {/* Info Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-[22px]">
-              <div className="bg-[#f4f4f7] rounded-[10px] p-[28px] min-h-[190px]">
+              <div className="bg-[#f4f4f7] rounded-[10px] p-5 md:p-[28px] min-h-[190px]">
                 <IconBox icon={<MapPin size={18} />} />
                 <h3 className="text-[15px] font-bold mt-6 mb-4">
                   Office Address
@@ -68,7 +68,7 @@ const ContactUs = () => {
                 </p>
               </div>
 
-              <div className="bg-[#f4f4f7] rounded-[10px] p-[28px] min-h-[190px]">
+              <div className="bg-[#f4f4f7] rounded-[10px] p-5 md:p-[28px] min-h-[190px]">
                 <IconBox icon={<Phone size={18} />} />
                 <h3 className="text-[15px] font-bold mt-6 mb-4">
                   Phone Number
@@ -79,7 +79,7 @@ const ContactUs = () => {
                 <p className="text-[13px] text-black">9912135070</p>
               </div>
 
-              <div className="bg-[#f4f4f7] rounded-[10px] p-[28px] min-h-[190px]">
+              <div className="bg-[#f4f4f7] rounded-[10px] p-5 md:p-[28px] min-h-[190px]">
                 <IconBox icon={<Mail size={18} />} />
                 <h3 className="text-[15px] font-bold mt-6 mb-4">
                   Email Address
@@ -93,7 +93,7 @@ const ContactUs = () => {
                 </p>
               </div>
 
-              <div className="bg-[#f4f4f7] rounded-[10px] p-[28px] min-h-[190px]">
+              <div className="bg-[#f4f4f7] rounded-[10px] p-5 md:p-[28px] min-h-[190px]">
                 <IconBox icon={<Clock size={18} />} />
                 <h3 className="text-[15px] font-bold mt-6 mb-4">
                   Working Hours
@@ -110,7 +110,7 @@ const ContactUs = () => {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="bg-white rounded-[10px] border border-black/10 p-[26px]"
+              className="bg-white rounded-[10px] border border-black/10 p-5 md:p-[26px]"
             >
               <FormInput
                 label="Name"
@@ -155,7 +155,7 @@ const ContactUs = () => {
 
               <button
                 type="submit"
-                className="w-full h-[40px] rounded-[6px] bg-[#2637e8] text-white text-[13px] font-medium mt-[55px]"
+                className="w-full h-[40px] rounded-[6px] bg-[#2637e8] text-white text-[13px] font-medium mt-6 md:mt-[55px]"
               >
                 Contact Us
               </button>

@@ -9,8 +9,8 @@ const Navbar = () => {
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <nav className="w-full bg-white ">
-      <div className="max-w-[1240px] mx-auto h-[82px] px-8 flex items-center justify-between">
+    <nav className="w-full bg-white">
+      <div className="max-w-[1240px] mx-auto h-[72px] md:h-[82px] px-4 sm:px-6 md:px-8 flex items-center justify-between">
         
         {/* Logo */}
         <Link to="/" onClick={closeMobileMenu} className="flex items-center">
@@ -165,7 +165,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-black/10 bg-white px-8 pb-6">
+        <div className="md:hidden border-t border-black/10 bg-white px-4 sm:px-6 pb-6">
           <div className="flex flex-col gap-4 pt-4 text-[16px] font-medium text-black">
             <Link to="/" onClick={closeMobileMenu} className="text-blue-600">
               Home

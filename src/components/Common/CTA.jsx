@@ -11,8 +11,10 @@ const CTA = () => {
           relative
           overflow-hidden
           rounded-[8px]
-          px-[34px]
-          py-[22px]
+          px-5
+          sm:px-[34px]
+          py-6
+          md:py-[22px]
           flex
           flex-col
           md:flex-row
@@ -26,14 +28,14 @@ const CTA = () => {
         "
         >
           {/* Background Glow */}
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-20 hidden sm:block">
             <div className="absolute -top-[120px] left-[180px] w-[240px] h-[240px] rounded-full bg-[#8f7cff] blur-[80px]" />
             <div className="absolute -bottom-[100px] right-[120px] w-[220px] h-[220px] rounded-full bg-[#4d58ff] blur-[70px]" />
           </div>
 
           {/* Content */}
-          <div className="relative z-10">
-            <h2 className="text-white text-[18px] md:text-[30px] font-bold leading-[1.25] mb-[8px]">
+          <div className="relative z-10 text-center md:text-left">
+            <h2 className="text-white text-[22px] md:text-[30px] font-bold leading-[1.25] mb-[8px]">
               Ready to Build Your Next Digital Solution?
             </h2>
 
@@ -44,7 +46,7 @@ const CTA = () => {
           </div>
 
           {/* Button */}
-          <div className="relative z-10">
+          <div className="relative z-10 w-full md:w-auto">
             <Link
               to="/contact"
               className="
@@ -52,6 +54,8 @@ const CTA = () => {
               text-[#2637e8]
               px-[22px]
               h-[44px]
+              w-full
+              md:w-auto
               rounded-[6px]
               text-[13px]
               font-semibold

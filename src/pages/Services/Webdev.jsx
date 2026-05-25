@@ -28,10 +28,10 @@ const Webdev = () => {
     <main className="w-full bg-[#f4f6f8]">
 {/* Hero */}
         <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
         >
-        <h1 className="text-white text-[34px] font-bold">Web Development Services</h1>
+        <h1 className="text-white text-[26px] md:text-[34px] leading-tight font-bold">Web Development Services</h1>
       </section>
     
 

@@ -7,23 +7,23 @@ import logo from "../assets/Footer.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#101010] text-white px-6 md:px-12 lg:px-24 pt-10 pb-8">
+    <footer className="w-full bg-[#101010] text-white px-4 sm:px-6 md:px-12 lg:px-24 pt-10 pb-8">
       <div className="max-w-[1240px] mx-auto">
         {/* Top Footer */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 lg:gap-20">
           {/* About */}
           <div>
             <img
               src={logo}
               alt="OSSS Logo"
-              className="w-[90px] h-[90px] object-contain mb-10"
+              className="w-[76px] h-[76px] md:w-[90px] md:h-[90px] object-contain mb-7 md:mb-10"
             />
 
             <h3 className="text-[21px] font-semibold tracking-wide mb-4">
               About Company.
             </h3>
 
-            <p className="text-[18px] leading-[1.5] text-gray-200 max-w-[300px]">
+            <p className="text-[16px] md:text-[18px] leading-[1.5] text-gray-200 max-w-[300px]">
               Empowering Futures, Crafting Solutions.
             </p>
 
@@ -140,11 +140,11 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-[1px] bg-white/20 mt-20 mb-6" />
+        <div className="w-full h-[1px] bg-white/20 mt-10 md:mt-20 mb-6" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-[16px] text-gray-300">
-          <div className="flex items-center gap-5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-[14px] md:text-[16px] text-gray-300">
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-5">
             <Link to="/privacy-policy" className="hover:text-white transition">
               Privacy Policy
             </Link>

@@ -60,17 +60,8 @@ const StatsBar = () => {
   ];
 
   return (
-    <div className="w-full py-8 px-4" style={{ background: '#f8f8f8' }}>
-      <div
-        className="max-w-6xl mx-auto  relative overflow-hidden"
-        style={{
-          background: 'rgba(35, 52, 222, 0.5)',
-          borderRadius: '19px 19px 19px 19px',
-          padding: '28px 40px',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-        }}
-      >
+    <div className="w-full bg-[#f8f8f8] py-6 md:py-8 px-4">
+      <div className="max-w-6xl mx-auto relative overflow-hidden rounded-[19px] bg-[rgba(35,52,222,0.5)] p-5 sm:p-7 md:px-10 grid grid-cols-2 lg:grid-cols-4 gap-y-6">
 
         {/* Decorative circle shapes */}
           {[
@@ -98,17 +89,15 @@ const StatsBar = () => {
         {stats.map((stat, i) => (
           <div
             key={stat.label}
-            className="text-center relative z-10"
-            style={i < stats.length - 1 ? {
-              borderRight: '1px solid rgba(255,255,255,0.2)',
-            } : {}}
+            className={`text-center relative z-10 px-3 ${
+              i % 2 === 0 ? "border-r border-white/20 lg:border-r" : "lg:border-r border-white/20"
+            } ${i === stats.length - 1 ? "lg:border-r-0" : ""}`}
           >
-            <p className="text-4xl font-bold text-white mb-2">
+            <p className="text-3xl md:text-4xl font-bold text-white mb-2">
               <AnimatedCounter end={stat.value} suffix={stat.suffix} />
             </p>
             <p
-              className="text-xs font-semibold uppercase tracking-widest "
-              style={{ color: 'rgb(255, 255, 255)' }}
+              className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white"
             >
               {stat.label}
             </p>

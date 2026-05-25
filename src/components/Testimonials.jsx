@@ -55,20 +55,20 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="w-full bg-[#dedede] py-[70px] px-4 md:px-8 lg:px-[100px] overflow-hidden">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[390px_1fr] gap-[85px] items-start">
+    <section className="w-full bg-[#dedede] py-12 md:py-[70px] px-4 md:px-8 lg:px-[100px] overflow-hidden">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[390px_1fr] gap-10 lg:gap-[85px] items-start">
         {/* Left Content */}
         <div className="pt-[2px]">
-          <span className="inline-flex items-center justify-center h-[30px] px-5 rounded-full border border-[#2637e8]/60 bg-white/30 text-[#2637e8] text-[16px] leading-none mb-5">
+          <span className="inline-flex items-center justify-center min-h-[30px] px-5 rounded-full border border-[#2637e8]/60 bg-white/30 text-[#2637e8] text-[14px] md:text-[16px] leading-none mb-5">
             Client Feedback
           </span>
 
-          <h2 className="text-[#202020] text-[34px] md:text-[36px] font-extrabold leading-[1.35] tracking-[0.2px] mb-5">
+          <h2 className="text-[#202020] text-[28px] md:text-[36px] font-extrabold leading-[1.25] md:leading-[1.35] tracking-[0.2px] mb-5">
             Hear From Clients <br />
             Testimonials.
           </h2>
 
-          <p className="text-[#111] text-[21px] leading-[1.32] max-w-[410px] font-medium">
+          <p className="text-[#111] text-[16px] md:text-[21px] leading-[1.5] md:leading-[1.32] max-w-[410px] font-medium">
             We are proud to work with businesses across industries and deliver
             solutions that create real results. Here’s what our clients say about
             their experience with OSSS Consulting Services.
@@ -89,32 +89,32 @@ const Testimonials = () => {
                   key={index}
                   className="min-w-full md:min-w-[50%] px-[10px]"
                 >
-                  <div className="relative bg-white rounded-[8px] h-[276px] overflow-visible">
+                  <div className="relative bg-white rounded-[8px] min-h-[300px] md:min-h-[276px] overflow-visible pb-[76px]">
                     {/* Quote Icon */}
-                    <div className="absolute -top-[1px] right-[40px] w-[66px] h-[58px] bg-[#dedede] rounded-bl-[12px] flex items-start justify-center">
+                    <div className="absolute -top-[1px] right-[20px] md:right-[40px] w-[56px] md:w-[66px] h-[50px] md:h-[58px] bg-[#dedede] rounded-bl-[12px] flex items-start justify-center">
                       <Quote
-                        size={58}
+                        size={52}
                         className="text-[#2637e8] fill-[#2637e8]"
                         strokeWidth={2}
                       />
                     </div>
 
                     {/* Stars */}
-                    <div className="px-[28px] pt-[28px] text-[#f7b51e] text-[23px] tracking-[1px]">
+                    <div className="px-5 md:px-[28px] pt-[28px] text-[#f7b51e] text-[20px] md:text-[23px] tracking-[1px]">
                       ★★★★★
                     </div>
 
                     {/* Text */}
-                    <div className="px-[28px] pt-[14px] pr-[38px]">
-                      <p className="text-[#111] text-[18px] leading-[1.33] font-medium">
+                    <div className="px-5 md:px-[28px] pt-[14px] md:pr-[38px]">
+                      <p className="text-[#111] text-[15px] md:text-[18px] leading-[1.5] md:leading-[1.33] font-medium">
                         {item.text}
                       </p>
                     </div>
 
                     {/* Bottom Author */}
-                    <div className="absolute left-0 right-0 bottom-0 h-[68px] border-t border-black/20 px-[28px] flex items-center justify-between">
+                    <div className="absolute left-0 right-0 bottom-0 min-h-[68px] border-t border-black/20 px-5 md:px-[28px] py-3 flex items-center justify-between gap-3">
                       <div>
-                        <h4 className="text-[21px] leading-none font-bold text-[#111]">
+                        <h4 className="text-[18px] md:text-[21px] leading-none font-bold text-[#111]">
                           {item.name}
                         </h4>
                         <p className="text-[11px] italic text-[#222] mt-2">
@@ -135,7 +135,7 @@ const Testimonials = () => {
           </div>
 
           {/* Controls */}
-          <div className="flex items-center gap-[22px] mt-[40px]">
+          <div className="flex items-center justify-center lg:justify-start gap-[22px] mt-[32px] md:mt-[40px]">
             <button
               type="button"
               onClick={prevSlide}

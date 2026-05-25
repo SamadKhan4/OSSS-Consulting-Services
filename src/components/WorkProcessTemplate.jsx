@@ -34,14 +34,14 @@ const WorkProcessTemplate = ({
   return (
     <section className="w-full bg-[#f4f6f8] py-12 px-4 md:px-8 lg:px-[70px]">
       <div
-        className="relative max-w-[1280px] mx-auto min-h-[360px] rounded-[14px] overflow-hidden bg-cover bg-center px-6 md:px-10 lg:px-[70px] py-10"
+        className="relative max-w-[1280px] mx-auto min-h-[360px] rounded-[14px] overflow-hidden bg-cover bg-center px-4 sm:px-6 md:px-10 lg:px-[70px] py-10"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#6f7188]/35" />
 
         {/* Heading */}
-        <div className="relative z-10 text-center mb-14">
+        <div className="relative z-10 text-center mb-12 md:mb-14">
           <span className="inline-block text-[11px] text-[#2637e8] bg-white/30 border border-white/40 px-3 py-1 rounded-full mb-3">
             {badge}
           </span>
@@ -59,9 +59,9 @@ const WorkProcessTemplate = ({
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-[9px] min-h-[170px] pt-16 px-5 pb-6"
+              className="relative bg-white rounded-[9px] min-h-[170px] pt-14 md:pt-16 px-5 pb-6"
             >
-              <div className="absolute -top-[34px] left-1/2 -translate-x-1/2 w-[84px] h-[84px] rounded-full bg-[#2637e8] text-white flex items-center justify-center text-[22px] font-bold shadow-[0_8px_0_rgba(38,55,232,0.22)]">
+              <div className="absolute -top-[30px] md:-top-[34px] left-1/2 -translate-x-1/2 w-[72px] h-[72px] md:w-[84px] md:h-[84px] rounded-full bg-[#2637e8] text-white flex items-center justify-center text-[19px] md:text-[22px] font-bold shadow-[0_8px_0_rgba(38,55,232,0.22)]">
                 {step.number}
               </div>
 

@@ -56,15 +56,15 @@ const BlogPage = () => {
     <main>
         {/* Hero */}
               <section
-                    className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+                    className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
                     style={{ backgroundImage: `url(${bg})` }}
                   >
-                    <h1 className="text-white text-[34px] font-bold">Blog</h1>
+                    <h1 className="text-white text-[28px] md:text-[34px] leading-tight font-bold">Blog</h1>
               </section>
 
 
 {/* Blog Content */}
-<section className="w-full bg-[#f4f6f8] py-[70px] px-4 md:px-8 lg:px-[95px]">
+<section className="w-full bg-[#f4f6f8] py-12 md:py-[70px] px-4 md:px-8 lg:px-[95px]">
   <div className="max-w-[1240px] mx-auto">
 
     {/* Heading */}
@@ -73,7 +73,7 @@ const BlogPage = () => {
         Blog
       </span>
 
-      <h2 className="text-[36px] font-bold text-[#1b1b1b] mb-3">
+      <h2 className="text-[28px] md:text-[36px] leading-tight font-bold text-[#1b1b1b] mb-3">
         Insights & Latest Updates
       </h2>
 

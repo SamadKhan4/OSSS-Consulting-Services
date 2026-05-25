@@ -35,11 +35,11 @@ const KeyFeatures = ({
     <section className="w-full bg-[#081226] py-[45px] px-4 md:px-8 lg:px-[90px]">
       <div className="max-w-[1200px] mx-auto">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-[40px] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-[40px] items-center">
 
           {/* Left */}
           <div>
-            <h2 className="text-white text-[30px] md:text-[36px] font-bold leading-[1.2] mb-[32px]">
+            <h2 className="text-white text-[24px] md:text-[36px] font-bold leading-[1.2] mb-[32px]">
               {title}
             </h2>
 
@@ -50,7 +50,7 @@ const KeyFeatures = ({
                 return (
                   <div
                     key={index}
-                    className="flex gap-4"
+                    className="flex gap-3 md:gap-4"
                   >
                     <div className="mt-[3px]">
                       <Icon
@@ -86,7 +86,7 @@ const KeyFeatures = ({
               <img
                 src={image}
                 alt={imageTitle}
-                className="w-full h-[240px] rounded-[8px] object-cover"
+                className="w-full h-[210px] sm:h-[240px] rounded-[8px] object-cover"
               />
             </div>
           </div>

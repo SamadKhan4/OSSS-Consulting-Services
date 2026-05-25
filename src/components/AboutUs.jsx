@@ -4,8 +4,8 @@ import aboutus from "../assets/Homepage/aboutus.png";
 
 const AboutUs = () => {
   return (
-    <section className="w-full bg-[#f4f6f8] py-12 px-6 md:px-12 lg:px-[100px]">
-      <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+    <section className="w-full bg-[#f4f6f8] py-12 px-4 sm:px-6 md:px-12 lg:px-[100px]">
+      <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         
         {/* Left Side */}
         <div>
@@ -13,7 +13,7 @@ const AboutUs = () => {
             About Us
           </span>
 
-          <h2 className="text-[28px] md:text-[34px] font-bold leading-[1.25] text-[#2437d9] max-w-[420px] mb-8">
+          <h2 className="text-[26px] md:text-[34px] font-bold leading-[1.25] text-[#2437d9] max-w-[420px] mb-8">
             Your Trusted Technology <br />
             & Digital Partner
           </h2>
@@ -22,7 +22,7 @@ const AboutUs = () => {
             <img
               src={aboutus}
               alt="About OSS Consulting Services"
-              className="w-full h-[230px] object-cover rounded-[4px]"
+              className="w-full h-[210px] sm:h-[230px] object-cover rounded-[4px]"
             />
 
             {/* Floating Clients Card */}

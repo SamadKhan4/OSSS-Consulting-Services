@@ -13,10 +13,10 @@ const About = () => {
     <main className="w-full bg-[#f4f6f8]">
       {/* Hero */}
       <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h1 className="text-white text-[34px] font-bold">About Us</h1>
+        <h1 className="text-white text-[28px] md:text-[34px] leading-tight font-bold">About Us</h1>
       </section>
 
       {/* About Content */}
@@ -28,7 +28,7 @@ const About = () => {
               <img
                 src={aboutImg}
                 alt="About OSSS"
-                className="w-full h-[406px] object-cover rounded-[8px]"
+                className="w-full h-[240px] sm:h-[320px] lg:h-[406px] object-cover rounded-[8px]"
               />
             </div>
 
@@ -51,8 +51,8 @@ const About = () => {
               </p>
 
               {/* Mission */}
-              <div className="grid grid-cols-[118px_1fr] gap-[12px] mb-[12px]">
-                <div className="bg-[#2637e8] rounded-[8px] flex items-center justify-center h-[126px]">
+              <div className="grid grid-cols-1 sm:grid-cols-[118px_1fr] gap-[12px] mb-[12px]">
+                <div className="bg-[#2637e8] rounded-[8px] flex items-center justify-center min-h-[96px] sm:h-[126px]">
                   <img
                     src={logo}
                     alt="OSSS Logo"
@@ -60,7 +60,7 @@ const About = () => {
                   />
                 </div>
 
-                <div className="bg-white rounded-[7px] px-[18px] py-[16px] h-[126px]">
+                <div className="bg-white rounded-[7px] px-[18px] py-[16px] min-h-[126px]">
                   <h3 className="text-[#2637e8] text-[20px] leading-none font-bold mb-[12px]">
                     Our Mission
                   </h3>
@@ -73,15 +73,15 @@ const About = () => {
               </div>
 
               {/* Vision */}
-              <div className="grid grid-cols-[118px_1fr] gap-[12px]">
-                <div className="bg-white rounded-[7px] flex flex-col items-center justify-center h-[86px]">
+              <div className="grid grid-cols-1 sm:grid-cols-[118px_1fr] gap-[12px]">
+                <div className="bg-white rounded-[7px] flex flex-col items-center justify-center min-h-[86px]">
                   <h3 className="text-[#2637e8] text-[26px] leading-none font-bold mb-[8px]">
                     10+
                   </h3>
                   <p className="text-[#2637e8] text-[11px]">Years of Legacy</p>
                 </div>
 
-                <div className="bg-white rounded-[7px] px-[18px] py-[13px] h-[86px]">
+                <div className="bg-white rounded-[7px] px-[18px] py-[13px] min-h-[86px]">
                   <h3 className="text-[#2637e8] text-[20px] leading-none font-bold mb-[10px]">
                     Our Vision
                   </h3>
@@ -96,7 +96,7 @@ const About = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-[20px] bg-[#8182ed] rounded-[10px] h-[112px] px-[60px] grid grid-cols-2 md:grid-cols-4 items-center text-center text-white">
+          <div className="mt-[20px] bg-[#8182ed] rounded-[10px] min-h-[112px] px-4 sm:px-[30px] lg:px-[60px] py-6 grid grid-cols-2 md:grid-cols-4 gap-y-6 items-center text-center text-white">
             <div>
               <h3 className="text-[25px] leading-none font-semibold mb-[10px]">85+</h3>
               <p className="text-[12px]">Team of Professionals</p>

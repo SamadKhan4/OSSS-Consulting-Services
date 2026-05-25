@@ -45,10 +45,10 @@ const SolutionTemplate = ({
   buttonLink = "/contact",
 }) => {
   return (
-    <section className="w-full bg-[#f4f6f8] py-[60px] px-4 md:px-8 lg:px-[90px]">
+    <section className="w-full bg-[#f4f6f8] py-12 md:py-[60px] px-4 md:px-8 lg:px-[90px]">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-[42px]">
-          <h2 className="text-[#2637e8] text-[28px] md:text-[34px] font-bold">
+          <h2 className="text-[#2637e8] text-[24px] md:text-[34px] leading-tight font-bold">
             {title}
           </h2>
           <div className="w-[70px] h-[4px] bg-[#2637e8] rounded-full mx-auto mt-[12px]" />
@@ -61,7 +61,7 @@ const SolutionTemplate = ({
             return (
               <div
                 key={index}
-                className="bg-white rounded-[10px] border border-black/10 p-[26px] min-h-[180px]"
+                className="bg-white rounded-[10px] border border-black/10 p-5 md:p-[26px] min-h-[180px]"
               >
                 <div className="w-[42px] h-[42px] rounded-[7px] bg-[#eaf1ff] text-[#5b8cff] flex items-center justify-center mb-[24px]">
                   <Icon size={22} strokeWidth={2} />
@@ -78,7 +78,7 @@ const SolutionTemplate = ({
             );
           })}
 
-          <div className="bg-[#2637e8] rounded-[10px] p-[26px] min-h-[180px] flex flex-col items-center justify-center text-center text-white">
+          <div className="bg-[#2637e8] rounded-[10px] p-5 md:p-[26px] min-h-[180px] flex flex-col items-center justify-center text-center text-white">
             <h3 className="text-[19px] font-bold mb-[14px]">{ctaTitle}</h3>
 
             <p className="text-[13px] leading-[1.5] mb-[20px] max-w-[210px]">

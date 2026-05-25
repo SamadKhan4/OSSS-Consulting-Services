@@ -7,13 +7,13 @@ const WriteForUs = () => {
   return (
     <main className="w-full bg-white">
       <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h1 className="text-white text-[34px] font-bold">Write For Us</h1>
+        <h1 className="text-white text-[28px] md:text-[34px] leading-tight font-bold">Write For Us</h1>
       </section>
 
-      <section className="py-[55px] px-4 md:px-8 lg:px-[100px]">
+      <section className="py-12 md:py-[55px] px-4 md:px-8 lg:px-[100px]">
         <div className="max-w-[1120px] mx-auto">
           <div className="text-center mb-[36px]">
             <span className="text-[11px] text-[#2637e8] border border-[#2637e8]/25 rounded-full px-3 py-1">
@@ -49,7 +49,7 @@ const WriteForUs = () => {
             How to Submit
           </h2>
 
-          <div className="max-w-[620px] mx-auto bg-[#0F172A] text-white rounded-[8px] px-[42px] py-[30px] text-center">
+          <div className="max-w-[620px] mx-auto bg-[#0F172A] text-white rounded-[8px] px-5 sm:px-[42px] py-[30px] text-center">
             <p className="text-[13px] leading-[1.6] mb-6">
               Send your pitch or completed draft to our editorial team via email.
               We typically respond within 3–5 business days.
@@ -60,7 +60,7 @@ const WriteForUs = () => {
                 <p className="text-[#6d8cff] text-[11px] font-bold mb-1">
                   EMAIL ADDRESS
                 </p>
-                <p className="text-[12px]">hr-manager@osssconsultingservices.com</p>
+                <p className="text-[12px] break-all">hr-manager@osssconsultingservices.com</p>
               </div>
 
               <div>

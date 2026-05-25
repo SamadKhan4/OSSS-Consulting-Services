@@ -40,23 +40,23 @@ const Brouchure = () => {
     <main className="w-full bg-[#f4f6f8]">
       {/* Hero */}
       <section
-        className="w-full h-[210px] bg-cover bg-center flex items-center justify-center"
+        className="w-full min-h-[170px] md:h-[210px] bg-cover bg-center flex items-center justify-center px-4 text-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <h1 className="text-white text-[34px] font-bold">
+        <h1 className="text-white text-[28px] md:text-[34px] leading-tight font-bold">
           Company Brochure
         </h1>
       </section>
 
       {/* Brochure Cards */}
-      <section className="py-[60px] px-4 md:px-8 lg:px-[90px]">
+      <section className="py-12 md:py-[60px] px-4 md:px-8 lg:px-[90px]">
         <div className="max-w-[1280px] mx-auto">
           <div className="text-center mb-[40px]">
             <span className="inline-block text-[12px] text-[#2637e8] border border-[#2637e8]/30 rounded-full px-4 py-1 mb-4">
               Our Service Brochures
             </span>
 
-            <p className="text-[18px] text-[#222] max-w-[720px] mx-auto leading-[1.35]">
+            <p className="text-[15px] md:text-[18px] text-[#222] max-w-[720px] mx-auto leading-[1.55] md:leading-[1.35]">
               Explore our comprehensive range of professional services. Download
               our detailed brochures to learn more about our methodologies and
               solutions.
@@ -75,7 +75,7 @@ const Brouchure = () => {
                   className="w-full h-[245px] object-cover object-top"
                 />
 
-                <div className="px-[28px] pt-[28px] pb-[26px]">
+                <div className="px-5 md:px-[28px] pt-6 md:pt-[28px] pb-[26px]">
                   <h3 className="text-[22px] font-bold text-[#111] mb-[18px]">
                     {item.title}
                   </h3>
